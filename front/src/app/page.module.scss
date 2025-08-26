@@ -3,10 +3,10 @@
 }
 
 .controls {
-  margin-bottom: 1rem;
+  margin: 1rem;
   display: flex;
   flex-wrap: wrap;
-  gap: 0.5rem;
+  gap: 5rem;
 
   input {
     padding: 0.5rem;
@@ -53,11 +53,11 @@
 }
 
 .incoming {
-  background-color: #e6ffed; // light green
+  background-color: #e6ffed;
 }
 
 .outgoing {
-  background-color: #ffe6e6; // light red
+  background-color: #ffe6e6;
 }
 
 .pagination {

@@ -43,7 +43,7 @@ const Dashboard: React.FC = () => {
   const [query, setQuery] = useState("");
   const [searchBox, setSearchBox] = useState("");
   const [loading, setLoading] = useState(false);
-  const [me, setMe] = useState("Yaya Wallet Pii"); // your account name/ID
+  const [me, setMe] = useState("Yaya Wallet Pii"); 
   const [error, setError] = useState<string | null>(null);
 
   async function load(p: number, q?: string) {
@@ -57,25 +57,6 @@ const Dashboard: React.FC = () => {
         []) as Tx[];
 
       let filtered = items;
-
-      // if (q) {
-      //   const queryLower = q.toLowerCase();
-      //   filtered = items.filter(tx => {
-      //     const senderName =
-      //       typeof tx.sender === "object" ? tx.sender ?? "" : tx.sender ?? "";
-      //     const receiverName =
-      //       typeof tx.receiver === "object" ? tx.receiver ?? "" : tx.receiver ?? "";
-      //     const cause = tx.cause ?? "";
-      //     const id = tx.transaction_id ?? tx.id ?? "";
-
-      //     return (
-      //       senderName.toLowerCase().includes(queryLower) ||
-      //       receiverName.toLowerCase().includes(queryLower) ||
-      //       cause.toLowerCase().includes(queryLower) ||
-      //       id.toLowerCase().includes(queryLower)
-      //     );
-      //   });
-      // }
 
       if (q) {
         const queryLower = q.toLowerCase();
@@ -128,12 +109,7 @@ const Dashboard: React.FC = () => {
       <h2>Transactions</h2>
 
       <form className={styles.controls} onSubmit={onSubmitSearch}>
-        <input
-          type="text"
-          placeholder="My account (name or ID)"
-          value={me}
-          onChange={(e) => setMe(e.target.value)}
-        />
+        <h3>User: {me}</h3>
         <input
           type="text"
           placeholder="Search sender, receiver, cause, or ID…"
