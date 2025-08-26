@@ -1,6 +1,6 @@
 # Yaya-Payment
 
-For the app, There are two separate folders, Front and Back, to handle the frontend and the backend respectively. On the backend I used nodeJs and express And for the frontend I used ReactJs.
+For the app, There are two separate folders, Front and Back, to handle the frontend and the backend respectively. On the backend I used nodeJs and express And for the frontend I used ReactJs.To run open the folders separately and run *npm run dev*
 
 The backend has two main files, The server.js and .env that handle the back end structure and the security. To get in to the detail of each file, the server first initialize express to start the app, cors to handle cors headers to allow communication between the frontend, dotenv to handle the security of the api key and the secret key.Crypto handles the encrypting.
 

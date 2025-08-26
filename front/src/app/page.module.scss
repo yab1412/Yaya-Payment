@@ -1,0 +1,80 @@
+.container {
+  padding: 1rem;
+}
+
+.controls {
+  margin-bottom: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+
+  input {
+    padding: 0.5rem;
+    flex: 1;
+    min-width: 200px;
+  }
+
+  button {
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+  }
+
+  @media (max-width: 600px) {
+    display: block;
+
+    input,
+    button {
+      width: 100%;
+      margin-bottom: 0.5rem;
+    }
+  }
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  overflow-x: auto;
+
+  th,
+  td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    white-space: nowrap;
+  }
+
+  th {
+    background: #f4f4f4;
+  }
+
+  @media (max-width: 600px) {
+    display: block;
+    overflow-x: scroll;
+  }
+}
+
+.incoming {
+  background-color: #e6ffed; // light green
+}
+
+.outgoing {
+  background-color: #ffe6e6; // light red
+}
+
+.pagination {
+  margin-top: 1rem;
+
+  button {
+    margin: 0 0.5rem;
+    padding: 0.5rem 1rem;
+  }
+}
+
+.status, .error {
+  margin: 0.5rem 0;
+  font-weight: bold;
+}
+
+.empty {
+  text-align: center;
+  color: #666;
+}
