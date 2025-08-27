@@ -15,14 +15,10 @@ const API_SECRET = process.env.YAYA_API_SECRET;
 
 // Headers signature
 function buildHeaders(method, endpoint, body) {
-  const timestamp = Date.now().toString(); // 13-digit ms
+  const timestamp = Date.now().toString();
   let endpointForSign = endpoint;
 
   if (method.toUpperCase() === "GET") {
-    endpointForSign = endpoint.split("?")[0];
-  }
-
-  if (method.toUpperCase() === "POST") {
     endpointForSign = endpoint.split("?")[0];
   }
 
